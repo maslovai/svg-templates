@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
-import { Tabs, TabsProps } from '@tableau/tableau-ui';
+import SplitPane from 'react-split-pane';
+import { Tabs} from '@tableau/tableau-ui';
 import LeftTopTabOne from'./tab1';
 import LeftTopTabTwo from './tab2';
 import LeftBottom from '../left-bottom/left-bottom';
@@ -9,8 +10,8 @@ export default function LeftTop(){
     const  [tabs, setTabs] = useState([{content:<LeftTopTabOne/>,title:"tab1"},
                    {content:<LeftTopTabTwo/>,title:"tab2"}]);
     return (
-        <div>
-            <div className="wrapperLeft"> 
+        <SplitPane split="horizontal" minSize={100} defaultSize={500}>
+            <div> 
                 <Tabs 
                     onTabChange={(index) => {
                     console.log(`onChange: ${index}`);
@@ -19,12 +20,12 @@ export default function LeftTop(){
                     selectedTabIndex={selectedTabIndex}
                     tabs={tabs}
                 >
-                    <span>{tabs[selectedTabIndex].content}</span>
+                    {tabs[selectedTabIndex].content}
                 </Tabs>
                 
             </div >
-            
-            <LeftBottom/>
-        </div>
+
+            <LeftBottom header='LEFT_BOTTOM'/>
+        </SplitPane>
     )
 }
