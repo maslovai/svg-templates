@@ -5,9 +5,9 @@ import LeftTopTabOne from'./tab1';
 import LeftTopTabTwo from './tab2';
 import LeftBottom from '../left-bottom/left-bottom';
 
-export default function LeftTop(){
+export default function Left(){
     const [selectedTabIndex,setIndex]=useState(0);
-    const  [tabs, setTabs] = useState([{content:<LeftTopTabOne/>,title:"tab1"},
+    const  [tabs] = useState([{content:<LeftTopTabOne/>,title:"tab1"},
                    {content:<LeftTopTabTwo/>,title:"tab2"}]);
     return (
         <SplitPane split="horizontal" minSize={100} defaultSize={500}>

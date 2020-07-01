@@ -1,8 +1,8 @@
  @import './components/toolbar/toolbar.scss';
 /*@import '../src/components/left-top/left-top.scss'; 
+/* @import '../src/components/right-bottom/right-bottom.scss';*/
+@import '../src/components/left-bottom/left-bottom.scss'; 
 @import '../src/components/right-top/right-top.scss';
-/* @import '../src/components/right-bottom/right-bottom.scss';
-@import '../src/components/left-bottom/left-bottom.scss'; */
 body {
   margin: 0;
   border:1px solid grey;

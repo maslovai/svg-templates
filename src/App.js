@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
 import Toolbar from './components/toolbar/toolbar';
-import LeftTop from './components/left-top/left-top';
-import RightTop from './components/right-top/right-top';
+import Left from './components/left/left';
+import Right from './components/right/right';
 import SplitPane from 'react-split-pane';
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
     <div className="App">
        <Toolbar/>
        <SplitPane split="vertical" minSize={200} defaultSize={800}>
-           <LeftTop/>
-           <RightTop/> 
+           <Left/>
+           <Right/> 
        </SplitPane>
     </div>
   );
