@@ -4,18 +4,18 @@ export default function Toolbar(){
     // const [value, setValue] = useState('');
     return (
         <div className="wrapperTools">
-            <div className="tools">
+            <span className="tools">
                 <Button kind='outline'>RUN</Button>
-            </div>
-            <div className="tools">
-                <DropdownSelect label='Label' kind='outline' >
+            </span>
+            <span className="tools">
+                <DropdownSelect  >
                 {/* onChange={e => setValue(e.target.value)} */}
                     <option>alpha</option>
                     <option>beta</option>
                     <option>charlie</option>
                     <option>delta</option>
                 </DropdownSelect>
-            </div>
+            </span>
            
         </div>
     )
